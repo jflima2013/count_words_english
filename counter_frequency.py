@@ -4,6 +4,6 @@ class Counter(dict):
 
 
 counter = Counter()
-word = 'banana'
+word = 'felicidade'
 counter[word] += 1
 print(counter)
