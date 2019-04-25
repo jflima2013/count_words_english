@@ -4,14 +4,15 @@ class Counter(dict):
 
 
 word_list = ['ola', 'ola', 'boa', 'boa', 'bondadade', 'amor', 'diginidade',
-             'amor', 'boa']
+             'amor', 'boa', 'justiça', 'liberdade', 'paciência', 'paciência']
 
-counts = Counter()
-for word in word_list:
-    counts[word] += 1
 
+def cont_frequency(word_list):
+    counts = Counter()
+    for word in word_list:
+        counts[word] += 1
+    return counts
+
+
+counts = cont_frequency(word_list)
 print(counts)
-
-# word = 'felicidade'
-# counts[word] += 1
-# print(counts)
