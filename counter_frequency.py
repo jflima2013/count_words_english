@@ -3,7 +3,15 @@ class Counter(dict):
         return 0
 
 
-counter = Counter()
-word = 'felicidade'
-counter[word] += 1
-print(counter)
+word_list = ['ola', 'ola', 'boa', 'boa', 'bondadade', 'amor', 'diginidade',
+             'amor', 'boa']
+
+counts = Counter()
+for word in word_list:
+    counts[word] += 1
+
+print(counts)
+
+# word = 'felicidade'
+# counts[word] += 1
+# print(counts)
