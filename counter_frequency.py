@@ -1,10 +1,8 @@
-class Counter(dict):
-    def __missing__(self, key):
-        return 0
+from collections import defaultdict
 
 
 def cont_frequency(word_list):
-    counts = Counter()
+    counts = defaultdict(int)
     for word in word_list:
         counts[word] += 1
     return counts
