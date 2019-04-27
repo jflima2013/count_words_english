@@ -18,17 +18,13 @@ counts = cont_frequency(word_list)
 print(len(word_list))
 print(len(counts))
 
+count = 0
+for word in sorted(counts, key=counts.get, reverse=True):
+    # print("%s: %s" % (counts[word], word))
+    print("%s: %s" % (word, counts[word]))
+    if count == 100:
+        break
+    count += 1
 
-def exchange_key_value(counts):
-    exchange = {}
-    for word in sorted(counts, key=counts.get, reverse=True):
-        exchange[counts[word]] = word
-    return exchange
-
-
-def exchange_key_value(counts):
-    return {}
-
-
-exchange_counts = exchange_key_value(counts)
-print(len(exchange_counts))
+# exchange_counts = exchange_key_value(counts)
+# print(len(exchange_counts))
