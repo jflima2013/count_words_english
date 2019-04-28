@@ -11,7 +11,6 @@ with open(file_name, 'r') as reader:
 
 text = text.translate(str.maketrans('', '', string.punctuation))
 text = text.translate(str.maketrans('', '', string.digits))
-# apenas letras
 # palavras chave python
 # letras sozinhas
 # palavras que eu ja conheço
