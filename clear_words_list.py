@@ -1,6 +1,9 @@
 import string
 
 
+punctuations = list(string.punctuation)
+digits = list(string.digits)
+
 key_words = [
     "False", "await", "else", "import", "pass", "None", "break",
     "except", "in", "raise", "True", "class", "finally", "is",
@@ -11,11 +14,11 @@ key_words = [
     ]
 
 unwanted_words = ["’"]
+words_already_known = []
 
 
-punctuations = list(string.punctuation)
-digits = list(string.digits)
-words_not_allowed = punctuations + digits + key_words + unwanted_words
+words_not_allowed = punctuations + digits + key_words + unwanted_words + \
+                     words_already_known
 
 
 def clear_word_list(words_list):
