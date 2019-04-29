@@ -1,10 +1,10 @@
 import string
 from counter_frequency import cont_frequency
 from words_from_strings import words_from_string
+from clear_words_list import clear_word_list
 
 
-file_name = '/home/jfk/pickaxe/tut_containers/word_freq/books/\
-programming_ruby.txt'
+file_name = 'doc.txt'
 
 with open(file_name, 'r') as reader:
     text = reader.read()
@@ -16,9 +16,10 @@ text = text.translate(str.maketrans('', '', string.digits))
 # palavras que eu ja conheço
 
 word_list = words_from_string(text)
-counts = cont_frequency(word_list)
+clear_word_list = clear_word_list(word_list)
+counts = cont_frequency(clear_word_list)
 
-quantity_items_left = 100
+quantity_items_left = 20
 count = 0
 for word in sorted(counts, key=counts.get, reverse=True):
     print("%s: %s" % (word, counts[word]))

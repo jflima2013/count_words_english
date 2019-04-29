@@ -7,12 +7,17 @@ key_words = ["False", "await", "else", "import", "pass", "None", "break",
 "assert", "del", "global", "not", "with", "async", "elif", "if", "or", "yield",
 "def"]
 
+unwanted_words = ["’"]
 
-clear_word_list(words_list):
+
+punctuations = list(string.punctuation)
+digits = list(string.digits)
+words_not_allowed = punctuations + digits + key_words + unwanted_words
+
+
+def clear_word_list(words_list):
     words_list_clear = []
     for word in words_list:
-        if word not in (list(string.punctuation)
-                    and not in list(string.digits))
-                    and not in key_words:
+        if word not in words_not_allowed and len(word) <= 4:
             words_list_clear.append(word)
-
+    return words_list_clear
