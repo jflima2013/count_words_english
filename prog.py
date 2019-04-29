@@ -4,13 +4,13 @@ from words_from_strings import words_from_string
 from clear_words_list import clear_word_list
 
 
-file_name = 'doc.txt'
+file_name = 'tutorial.txt'
 
 with open(file_name, 'r') as reader:
     text = reader.read()
 
-text = text.translate(str.maketrans('', '', string.punctuation))
-text = text.translate(str.maketrans('', '', string.digits))
+# text = text.translate(str.maketrans('', '', string.punctuation))
+# text = text.translate(str.maketrans('', '', string.digits))
 
 word_list = words_from_string(text)
 clear_word_list = clear_word_list(word_list)
