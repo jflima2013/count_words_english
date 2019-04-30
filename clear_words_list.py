@@ -22,8 +22,10 @@ words_not_allowed = punctuations + digits + key_words + unwanted_words + \
 
 
 def clear_word_list(words_list):
-    words_list_clear = []
+    # words_list_clear = []
     for word in words_list:
-        if word not in words_not_allowed and len(word) <= 4:
-            words_list_clear.append(word)
-    return words_list_clear
+        size_criteria = len(word) <= 4
+        if word not in words_not_allowed and size_criteria:
+            # words_list_clear.append(word)
+            yield word
+    # return words_list_clear
