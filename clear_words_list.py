@@ -18,14 +18,13 @@ unwanted_words = ("’")
 words_already_known = []
 
 
-# words_not_allowed = punctuations + digits + key_words + unwanted_words + \
-#                       words_already_known
-
-# words_not_allowed = punctuations, digits, key_words, unwanted_words, \
-#                       words_already_known
-
-words_not_allowed = chain(punctuations, digits, key_words, unwanted_words,
-                          words_already_known)
+words_not_allowed = set(chain(
+    punctuations,
+    digits,
+    key_words,
+    unwanted_words,
+    words_already_known
+    ))
 
 
 def clear_word_list(words_list):
