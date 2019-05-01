@@ -16,10 +16,8 @@ word_list = words_from_string(text)
 clear_word_list = clear_word_list(word_list)
 counts = cont_frequency(clear_word_list)
 
-quantity_items_left = 20
-count = 0
-for word in sorted(counts, key=counts.get, reverse=True):
+quantity_items_left = 100
+for count, word in enumerate(sorted(counts, key=counts.get, reverse=True), 1):
     print("%s: %s" % (word, counts[word]))
     if count == quantity_items_left:
         break
-    count += 1
