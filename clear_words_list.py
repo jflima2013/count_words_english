@@ -14,8 +14,8 @@ key_words = (
     "yield", "def"
     )
 
-unwanted_words = ("’")
-words_already_known = []
+unwanted_words = ("’", "''", "...", "``")
+words_already_known = ['python']
 
 
 words_not_allowed = set(chain(
@@ -29,6 +29,6 @@ words_not_allowed = set(chain(
 
 def clear_word_list(words_list):
     for word in words_list:
-        size_criteria = len(word) <= 4
+        size_criteria = len(word) > 1
         if word not in words_not_allowed and size_criteria:
             yield word
