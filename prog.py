@@ -13,7 +13,8 @@ with open(file_name, 'r') as reader:
 word_list = words_from_string(text)
 clear_word_list = clear_word_list(word_list)
 counts = Counter(clear_word_list)
-top_words = counts.most_common(20)
+top_words = counts.most_common(100)
+
 
 for word, count in top_words:
     print("{}: {}".format(count, word))

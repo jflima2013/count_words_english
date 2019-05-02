@@ -14,8 +14,8 @@ key_words = (
     "yield", "def"
     )
 
-unwanted_words = ("’", "''", "...", "``")
-words_already_known = ['python']
+unwanted_words = ("www")
+words_already_known = ('python')
 
 
 words_not_allowed = set(chain(
